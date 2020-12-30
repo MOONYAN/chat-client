@@ -16,6 +16,11 @@ export class RoomService {
     console.log(`Room service send: ${dto}`);
   }
 
+  brocast(dto: SendMessageDto) {
+    this.socket.emit('brocastToServer', dto)
+    console.log(`Room service brocast: ${dto}`);
+  }
+
   receive(): Observable<ReceiveMessageDto> {
     return new Observable(observer => {
       this.socket.on('chatToClient', (message: ReceiveMessageDto) => {

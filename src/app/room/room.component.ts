@@ -38,6 +38,15 @@ export class RoomComponent implements OnInit, OnDestroy {
     this.roomService.send(dto);
   }
 
+  brocastMessage(newedMessage: NewedMessage) {
+    console.log(newedMessage);
+    const dto = {
+      name: this.userService.getName(),
+      text: newedMessage.text
+    } as SendMessageDto;
+    this.roomService.brocast(dto);
+  }
+
   private receiveMessage() {
     this.roomService.receive().pipe(
       map(dto => new Message(dto)),
