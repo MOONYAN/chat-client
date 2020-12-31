@@ -8,7 +8,10 @@ export class ChatSocket extends Socket {
     const config: SocketIoConfig = {
       url: 'ws://localhost:3000/chat',
       options: {
-        transports: ['websocket']
+        transports: ['websocket'],
+        query:{
+          name:'Alice'
+        }
       }
     }
     super(config);
