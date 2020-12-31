@@ -1,6 +1,6 @@
 import { Message } from './model/message.vm';
 import { SendMessageDto } from './dto/send-message.dto';
-import { UserService } from './user.service';
+import { UserService } from '../user/user.service';
 import { NewedMessage } from './model/newed-message.vm';
 import { RoomService } from './room.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';

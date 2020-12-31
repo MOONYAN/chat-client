@@ -8,7 +8,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatChipsModule,
+    MatTooltipModule,
     MatDividerModule,
     MatButtonModule,
     MatIconModule
