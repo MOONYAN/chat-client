@@ -22,10 +22,6 @@ export class RoomService {
   }
 
   receive(): Observable<ReceiveMessageDto> {
-    return new Observable(observer => {
-      this.socket.on('chatToClient', (message: ReceiveMessageDto) => {
-        observer.next(message);
-      })
-    });
+    return this.socket.fromEvent<ReceiveMessageDto>('chatToClient');
   }
 }
