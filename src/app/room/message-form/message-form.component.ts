@@ -1,5 +1,5 @@
 import { NewedMessage } from './../model/newed-message.vm';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class MessageFormComponent implements OnInit {
 
   messageForm: FormGroup;
+
+  @Input() title: string;
 
   @Output() $newedMessage = new EventEmitter<NewedMessage>();
 
