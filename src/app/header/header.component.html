@@ -1,0 +1,17 @@
+<mat-toolbar color='primary'>
+
+  <span>{{title | uppercase}}</span>
+
+  <span class="toolbar-seprator"></span>
+
+  <mat-chip-list>
+    <mat-chip>
+      {{name}}
+    </mat-chip>
+  </mat-chip-list>
+
+  <button mat-icon-button matTooltip="leave chat" (click)="onLeave()" >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+
+</mat-toolbar>
