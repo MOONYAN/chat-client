@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { UserService } from './../user/user.service';
 import { Socket, SocketIoConfig } from 'ngx-socket-io';
 import { Injectable } from '@angular/core';
@@ -9,7 +10,7 @@ export class ChatSocket extends Socket {
 
   constructor(userService: UserService) {
     const config: SocketIoConfig = {
-      url: 'ws://localhost:3000/chat',
+      url: `${environment.websocket_url}/chat`,
       options: {
         transports: ['websocket'],
         query: {
